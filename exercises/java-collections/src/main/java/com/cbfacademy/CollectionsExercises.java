@@ -5,14 +5,22 @@ import java.util.*;
 public class CollectionsExercises {
 
     public LinkedList<Integer> useLinkedList() {
-        // TODO: create an empty linked list
-        //  - add 4 as the first element of the list
-        //  - then add 5, 6, 8, 2, 9 to the the list
-        //  - add another 2 as the last element of the list
-        //  - add 4 as the 3rd element of the list
-        //  - invoke the method element() on the list and print the result on the screen
-        //  - return the list
-        throw new RuntimeException("Not implemented");
+        
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        linkedList.addFirst(4);
+        linkedList.add(5);
+        linkedList.add(6);
+        linkedList.add(8);
+        linkedList.add(2);
+        linkedList.add(9);
+        linkedList.addLast(2);
+        linkedList.add(2, 4);
+
+        int resultLink = linkedList.element();
+        System.out.println(resultLink);
+
+        return linkedList;
     }
 
     public Stack<Integer> useStack() {
@@ -28,9 +36,21 @@ public class CollectionsExercises {
 
     public ArrayDeque<Integer> useArrayDeque() {
         // TODO: create an empty arrayDeque
-        //  - add 5, 6, 8, 9 to the the stack
-        //  - print the first element of the queue on the screen
-        //  - print the last element of the queue on the screen
+        ArrayDeque<Integer> newArrayDeque = new ArrayDeque<>();
+        
+        newArrayDeque.add(5);
+        newArrayDeque.add(6);
+        newArrayDeque.add(8);
+        newArrayDeque.add(9);
+
+       int firstElement = newArrayDeque.peekFirst();
+       System.out.println(firstElement);
+
+       int lastElement = newArrayDeque.peekLast();
+       System.out.println(lastElement);
+
+       
+
         //  - invoke the method poll() on the queue and print the result on the screen
         //  - invoke the element() method on the queue and print the result on the screen
         //  - return the queue
@@ -38,18 +58,25 @@ public class CollectionsExercises {
     }
 
     public HashMap<Integer, String> useHashMap() {
-        // TODO: create an empty hash map
-        //  - add {1, TypeScript} entry to the map
-        //  - add {2, Kotlin} entry to the map
-        //  - add {3, Python} entry to the map
-        //  - add {4, Java} entry to the map
-        //  - add {5, JavaScript} entry to the map
-        //  - add {6, Rust} entry to the map
-        //  - determine the set of keys from the map and print it on the screen
-        //  - determine the set of keys from the map and print it on the screen
+
+        HashMap<Integer, String> progLang = new HashMap<>(); 
+        progLang.put(1, "TypeScript");
+        progLang.put(2, "Kotlin");
+        progLang.put(3, "Python");
+        progLang.put(4, "Java");
+        progLang.put(5, "JavaScript");
+        progLang.put(6, "Rust");
+
+        Set<Integer> keys = progLang.keySet();
+        System.out.println("Set of keys from the map: " + keys);
+
+        boolean containsKey4 = progLang.containsKey(4);
+        System.out.println("Does the map contain key 4? " + containsKey4);
+        
+        
         //  - determine whether the map contains "English" as a language and print the result on the screen
-        //  - return the map
-        throw new RuntimeException("Not implemented");
+        return progLang;
+      
     }
 
     public String getName() {

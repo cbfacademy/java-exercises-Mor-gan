@@ -27,7 +27,6 @@ public class StringExercises {
         }
         return word.equals(reverse);
     }
-
     public String getName() {
         return "String Exercises";
     }

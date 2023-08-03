@@ -8,8 +8,7 @@ public class App {
         double[] doubleArray = {2.22f,2,2.23,2.24,2.25,2.26,2.27,2.28,2.9};
         boolean[] booleanArray = {true, false,true,false,true,false};
 
-        
-        
+                
         System.out.println( intArray[4]); 
         System.out.println( floatArray[4]);
         System.out.println( doubleArray[4]);
