@@ -7,21 +7,36 @@ import java.util.Map;
 public class FlowControlExercises {
 
     public List<String> fizzBuzz(List<Integer> numbers) {
-        // TODO - Implement this method such that
-        //  it creates a list where for each element of the input list ${numbers}
-        //  - if the ${element} is divisible by 3, it adds “Fizz” to the list
-        //  - if the ${element} is divisible by 5, it adds “Buzz” to the list
-        //  - if the ${element} is divisible by both 3 and 5, it adds “FizzBuzz” to the list
-        //  - it adds the element to the list in any other case
-        //  - it returns the constructed list
-        throw new RuntimeException("Not implemented");
+        List<String> result = new ArrayList<>();
+        for (int number : numbers){
+            boolean divisibleBy3 = (number % 3 == 0);
+            boolean divisibleBy5 = (number % 5 == 0);
+            if (divisibleBy3 && divisibleBy5) {
+                result.add("FizzBuzz");
+            } else if (divisibleBy3) {
+                result.add("Fizz");
+            } else if (divisibleBy5) {
+                result.add("Buzz");
+            } else {
+                result.add(String.valueOf(number));
+            } 
+        }
+        return result;
     }
 
     public String whichMonth(Integer number) {
         // TODO - Implement this method such that
-        //  - it returns the month corresponding to the input ${number}
-        //  - if the ${number} is invalid, the method should return "Invalid month number"
-        throw new RuntimeException("Not implemented");
+        String[] months = { 
+            "January", "February", "March", 
+            "April", "May", "June", 
+            "July", "August", "September", 
+            "October", "November", "December"
+        };
+       if(number >= 1 && number <=12 ){
+         return months[number];
+       }else {
+        return "invalid month number";
+       }
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {

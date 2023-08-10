@@ -49,8 +49,6 @@ public class CollectionsExercises {
        int lastElement = newArrayDeque.peekLast();
        System.out.println(lastElement);
 
-       
-
         //  - invoke the method poll() on the queue and print the result on the screen
         //  - invoke the element() method on the queue and print the result on the screen
         //  - return the queue
@@ -72,8 +70,7 @@ public class CollectionsExercises {
 
         boolean containsKey4 = progLang.containsKey(4);
         System.out.println("Does the map contain key 4? " + containsKey4);
-        
-        
+            
         //  - determine whether the map contains "English" as a language and print the result on the screen
         return progLang;
       
