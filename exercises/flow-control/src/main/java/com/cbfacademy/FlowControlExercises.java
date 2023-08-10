@@ -1,6 +1,7 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,10 +24,9 @@ public class FlowControlExercises {
         }
         return result;
     }
-
     public String whichMonth(Integer number) {
-        // TODO - Implement this method such that
         String[] months = { 
+            "Invalid month number",
             "January", "February", "March", 
             "April", "May", "June", 
             "July", "August", "September", 
@@ -35,25 +35,36 @@ public class FlowControlExercises {
        if(number >= 1 && number <=12 ){
          return months[number];
        }else {
-        return "invalid month number";
+        return months[0];
        }
     }
-
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
         // TODO - Implement this method such that
-        //  - creates and initialises a list of 100 numbers - from 1 to 100
-        //  - determines the sum of all the even numbers in the list
-        //  - determines the sum of all the odd numbers in the list
-        //  - returns a map with two entries:
-        //      {"SumOfEvens", calculatedSumOfEvens}, {"SumOfOdds", calculatedSumOfOdds}
-        throw new RuntimeException("Not implemented");
+         List<Integer> listHundred = new ArrayList<>();
+        for (int i = 1; i <= 100; i++) {
+            listHundred.add(i);
+        }
+        int sumOfEvens = 0;
+        int sumOfOdds = 0;
+        for (int num : listHundred) {
+            if (num % 2 == 0) {
+                sumOfEvens += num;
+            } else {
+                sumOfOdds += num;
+            }
+        }
+        Map<String, Integer> result = new HashMap<>();
+        result.put("SumOfEvens", sumOfEvens);
+        result.put("SumOfOdds", sumOfOdds);
+        return result;
     }
-
     public List<Integer> reverse(ArrayList<Integer> numbers) {
         // TODO - Implement this method such that
-        //  - it takes an array list of integers
-        //  - it returns the list in reverse order
-        throw new RuntimeException("Not implemented");
+        List<Integer> reversedNumbers = new ArrayList<>();
+        for (int i = numbers.size() - 1; i >= 0; i--) {
+            reversedNumbers.add(numbers.get(i));
+        }
+        return reversedNumbers;
     }
 
     public String getName() {
