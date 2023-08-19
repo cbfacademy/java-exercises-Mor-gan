@@ -4,20 +4,19 @@ public class Car {
     String make;
     String model;
     int year;
-
-    public String getMake(){
-      return make;
+    public String getMake() {
+        return make;
     }
-    public String getModel(){
+    public String getModel() {
         return model;
     }
-    public int getYear(){
+    public int getYear() {
         return year;
     }
-    public Car(String make, String model, int year){
-this.make = make;
-this.model = model;
-this.year = year;
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
     }
     public static void main(String[] args) {
         // Instantiate three Car objects with different details
