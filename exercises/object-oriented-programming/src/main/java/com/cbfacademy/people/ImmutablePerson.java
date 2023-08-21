@@ -5,10 +5,10 @@ import java.util.List;
 
 public class ImmutablePerson {
 
-   private final String firstName;
-    private String middleName;
-    private final  String lastName;
-    private List<String> nickName;
+    protected final String firstName;
+    protected String middleName;
+    protected final  String lastName;
+    protected List<String> nickName;
 
 public ImmutablePerson(String firstName, String lastName, String middleName, List<String> nickName) {
         this.firstName = firstName;
