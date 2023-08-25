@@ -1,19 +1,19 @@
 package com.cbfacademy.accounts;
 
 public class SavingsAccount extends Account {
-    protected double interest;
+    private double interest;
 
     public SavingsAccount(double balance, double accountNumber) {
         super(balance, accountNumber);
     }
 
-    protected double getInterest(){
-        return  interest;
+    public double getInterest() {
+        return interest;
     }
 
-    @Override protected double addInterest() {
-        if (balance > 0) {
-            return interest + balance;
+    public void addInterest() {
+        if (this.balance > 0) {
+            this.interest += this.balance;
         }
     }
 }

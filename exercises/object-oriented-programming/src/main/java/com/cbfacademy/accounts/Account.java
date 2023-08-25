@@ -2,30 +2,32 @@ package com.cbfacademy.accounts;
 
 public class Account {
 
-    protected double balance;
-    protected double accountNumber;
+    private double balance;
+    private double accountNumber;
 
-    public Account(double balance, double accountNumber){
+    public Account(double balance, double accountNumber) {
         this.balance = balance;
         this.accountNumber = accountNumber;
     }
-        public double getBalance() {
-            return balance;
-        }
-    
-        public double getAccountNumber() {
-            return accountNumber;
-        }
-       
-        public void deposit(double amount) {
-            if (amount > 0) {
-                balance += amount;
-            }
-        }
-        public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
+
+    public double getBalance() {
+        return this.balance;
+    }
+
+    public double getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            this.balance += amount;
         }
     }
-    
+
+    public void withDraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+        this.balance -= amount;
+        }
+    }
+
 }
