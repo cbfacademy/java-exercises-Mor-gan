@@ -2,7 +2,7 @@ package com.cbfacademy.accounts;
 
 public class Account {
 
-    private double balance;
+    protected double balance;
     private double accountNumber;
 
     public Account(double balance, double accountNumber) {
@@ -26,7 +26,7 @@ public class Account {
 
     public void withDraw(double amount) {
         if (amount > 0 && amount <= balance) {
-        this.balance -= amount;
+            this.balance -= amount;
         }
     }
 
