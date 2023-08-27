@@ -1,5 +1,6 @@
 package com.cbfacademy.shapes;
 
+
 public class Paint {
     protected double coverage;
 
@@ -7,4 +8,5 @@ public class Paint {
         double shapeArea = shape.area();
         return shapeArea / this.coverage;
     }
+
 }
